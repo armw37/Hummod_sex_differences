@@ -1,0 +1,103 @@
+HumMod / ANG2Plasma
+
+Created : 07-Jul-20
+Last Modified : 07-Jul-20
+Author : Anderson White
+Copyright : 2006-2011
+By : University Of Mississippi Medical Center
+
+<structure><name> ANG2Plasma </name>
+
+<variables>
+
+<var><name> Log10Conc </name></var>
+<var><name> c_ACE </name></var>
+<var><name> c_Chym </name></var>
+<var><name> c_ACE2 </name></var>
+<var><name> c_IIIV </name></var>
+<var><name> c_AT1R </name></var>
+<var><name> c_AT2R </name></var>
+<var><name> HalfLife </name><val> 0.66 </val></var>
+<var><name> InitialConc </name><val> 5 </val></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> [ANG2[fmol/L]] </name>
+  <integralname> [ANG2[fmol/L]] </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 500.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> [ANG2[fmol/L]] </name><val> InitialConc </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<conditional>
+  <name> c_ACE</name>
+  <test> Gender.IsFemale </test>
+  <true> 1.4079 </true>
+  <false> 0.88492 </false>
+</conditional>
+
+<conditional>
+  <name> c_Chym </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.1482 </true>
+  <false> 0.09315 </false>
+</conditional>
+
+<conditional>
+  <name> c_ACE2 </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.0037603 </true>
+  <false> 0.0078009 </false>
+</conditional>
+
+<conditional>
+  <name> c_IIIV </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.038644 </true>
+  <false> 0.25056 </false>
+</conditional>
+
+<conditional>
+  <name> c_AT1R </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.027089 </true>
+  <false> 0.17008 </false>
+</conditional>
+
+<conditional>
+  <name> c_AT2R </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.038699 </true>
+  <false> 0.065667 </false>
+</conditional>
+
+<def>
+  <name> Change </name>
+  <val> ( ( c_ACE + c_Chym ) * ANG1Plasma.[ANG1[fmol/L]] ) - ( ( c_ACE2 + c_IIIV + c_AT1R + c_AT2R ) * [ANG2[fmol/L]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANG2[fmol/L]] ) </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [ANG2[fmol/L]] GT 1.0 </test>
+  <true> LOG10 ( [ANG2[fmol/L]] ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End
+

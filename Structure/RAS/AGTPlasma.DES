@@ -1,0 +1,63 @@
+HumMod / AGTPlasma
+
+Created : 07-Jul-20
+Last Modified : 07-Jul-20
+Author : Anderson White
+Copyright : 2006-2011
+By : University Of Mississippi Medical Center
+
+<structure><name> AGTPlasma </name>
+
+<variables>
+
+<var><name> Log10Conc </name></var>
+<var><name> SecretionRate </name></var>
+<var><name> HalfLife </name><val> 600.0 </val></var>
+<var><name> InitialConc </name><val> 500000.0 </val></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> [AGT[fmol/L]] </name>
+  <integralname> [AGT[fmol/L]] </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 5.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> [AGT[fmol/L]] </name><val> InitialConc </val></def>
+</block>
+
+
+<block><name> Dervs </name>
+
+<conditional>
+  <name> SecretionRate </name>
+  <test> Gender.IsFemale </test>
+  <true> 610.39 </true>
+  <false> 577.04 </false>
+</conditional>
+
+<def>
+  <name> Change </name>
+  <val> SecretionRate - ReninPool.[PRA] - ( ( LOG ( 2 ) / HalfLife ) * [AGT[fmol/L]] ) </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [AGT[fmol/L]] GT 1.0 </test>
+  <true> LOG10 ( [AGT[fmol/L]] ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End

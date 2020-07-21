@@ -1,0 +1,65 @@
+HumMod / AT2R-ANG2
+
+Created : 07-Jul-20
+Last Modified : 07-Jul-20
+Author : Anderson White
+Copyright : 2006-2011
+By : University Of Mississippi Medical Center
+
+<structure><name> AT2R-ANG2 </name>
+
+<variables>
+
+<var><name> Log10Conc </name></var>
+<var><name> c_AT2R </name></var>
+<var><name> HalfLife </name><val> 12 </val></var>
+<var><name> InitialConc </name><val> 10.0 </val></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> [AT2R-ANG2[fmol/L]] </name>
+  <integralname> [AT2R-ANG2[fmol/L]] </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 500.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> [AT2R-ANG2[fmol/L]] </name><val> InitialConc </val></def>
+</block>
+
+<block><name> CalcConc </name>
+
+<conditional>
+  <name> c_AT2R </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.038699 </true>
+  <false> 0.065667 </false>
+</conditional>
+
+<def>
+  <name> Change </name>
+  <val> ( c_AT2R * ANG2Plasma.[ANG2[fmol/L]] ) - ( ( LOG ( 2 ) / HalfLife ) * [AT2R-ANG2[fmol/L]] ) </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [AT2R-ANG2[fmol/L]] GT 1.0 </test>
+  <true> LOG10 ( [AT2R-ANG2[fmol/L]] ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End
+
+
+

@@ -1,0 +1,138 @@
+HumMod / Morphology
+
+Created : 2014-02-25
+Revised : 2014-02-25
+Author : Tom Coleman
+Copyright : 2014-2014
+By : Tom Coleman
+
+<showvalue>
+   <row> 2.0 </row><col> 1.0 </col>
+   <name> Gender.Index </name>
+   <format><list> Common.Gender </list></format>
+   <label> Gender </label>
+</showvalue>
+
+<showvalue>
+   <row> 3.0 </row><col> 1.0 </col>
+   <name> Age.Age(Years) </name>
+   <format> <integer/> </format>
+   <label> Age </label>
+</showvalue>
+
+<showvalue>
+  <row> 4.0 </row><col> 1.0 </col>
+  <name> Height.Height(In) </name>
+  <label> Height </label>
+  <format><decimal> 1 </decimal></format>
+</showvalue>
+
+<showvalue>
+   <row> 5.0 </row><col> 1.0 </col>
+   <name> Weight.Weight(Lb) </name>
+   <format> <integer/> </format>
+   <label> Weight </label>
+</showvalue>
+
+<editbox>
+   <row> 3.0 </row><col> 61.0 </col>
+  <name> Apnea.EventRate </name>
+  <label> Apnic episodes /hr </label>
+</editbox>
+
+
+<radiobuttons>
+   <row> 6.0 </row><col> 91.0 </col>
+  <name> Ganglia-Renal.Clamp-Left </name>
+  <listname> Common.Switch </listname>
+  <label> Left </label>
+</radiobuttons>
+
+<editbox>
+   <row> 6.0 </row><col> 61.0 </col>
+  <name> Ganglia-Renal.Level-Left </name>
+  <label>Left level</label>
+</editbox>
+
+<editbox>
+   <row> 4.5 </row><col> 61.0 </col>
+  <name> Ganglia-Renal.Level-Right </name>
+  <label>Right level</label>
+</editbox>
+
+<editbox>
+   <row> 7.5 </row><col> 61.0 </col>
+  <name> Baroreflex.Sensitivity </name>
+  <label> Baro </label>
+</editbox>
+
+<editbox>
+   <row> 9.0 </row><col> 61.0 </col>
+  <name> LowPressureReceptors.Sensitivity </name>
+  <label> LPR</label>
+</editbox>
+
+
+<repeatlist>
+  <name> HypothalamusMagnocellularNeurons.DamageFraction </name>
+  <repeat><reps> 10 </reps><stepsize> 0.1 </stepsize></repeat>
+</repeatlist>
+
+<slidebar>
+  <row> 11.2 </row><col> 61.0 </col>
+  <name> HypothalamusMagnocellularNeurons.DamageFraction </name>
+  <listname>  HypothalamusMagnocellularNeurons.DamageFraction </listname>
+  <label> Pituitary Stalk damage </label>
+</slidebar>
+
+<editbox>
+   <row> 13.0 </row><col> 61.0 </col>
+  <name> LeftKidney-Structure.Fraction </name>
+  <label> Fraction Removed (left) </label>
+</editbox>
+
+<actionbutton>
+  <row> 13 </row><col> 94.0 </col>
+  <blockname> LeftKidney-Structure.Nephrectomize </blockname>
+  <label> Nephrectomize! </label>
+</actionbutton>
+
+<editbox>
+   <row> 15.0 </row><col> 61.0 </col>
+  <name> RightKidney-Structure.Fraction </name>
+  <label> Fraction Removed (right) </label>
+</editbox>
+
+<actionbutton>
+  <row> 15 </row><col> 94.0 </col>
+  <blockname> RightKidney-Structure.Nephrectomize </blockname>
+  <label> Nephrectomize! </label>
+</actionbutton>
+
+<showvalue>
+   <row> 13 </row><col> 110 </col>
+   <name> LeftKidney-Structure.Remaining </name>
+   <label> Kidney remaining </label>
+</showvalue>
+
+<showvalue>
+   <row> 15 </row><col> 110 </col>
+   <name> RightKidney-Structure.Remaining </name>
+   <label> Kidney remaining </label>
+</showvalue>
+
+<editbox>
+   <row> 17.0 </row><col> 61.0 </col>
+  <name> Pain.TargetPain </name>
+  <label> Pain </label>
+</editbox>
+
+<slidebar>
+  <row> 19 </row><col> 61.0 </col>
+  <name> Breathing.Blockage </name>
+  <listname> Common.Fraction </listname>
+  <label> Airway Blockade (0-1) </label>
+</slidebar>
+
+
+End

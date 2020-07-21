@@ -1,0 +1,97 @@
+HumMod / Renin
+
+Created : 21-Oct-04
+Last Modified : 2012-01-28
+Author : Tom Coleman
+Copyright : 2006-2012
+By : University Of Mississippi Medical Center
+
+<?path Structure\RAS\ ?>
+
+<?include ReninPool.DES ?>
+<?include LeftReninSecretion.DES ?>
+<?include RightReninSecretion.DES ?>
+<?include LeftReninSynthesis.DES ?>
+<?include RightReninSynthesis.DES ?>
+
+<?include ReninClearance.DES ?>
+<?include ReninTumor.DES ?>
+
+<?include LeftReninFree.DES ?>
+<?include RightReninFree.DES ?>
+
+<?include LeftReninGranules.DES ?>
+<?include RightReninGranules.DES ?>
+
+<?include AGTPlasma.DES ?>
+<?include ANG1Plasma.DES ?>
+<?include ANG2Plasma.DES ?>
+<?include AT1R-ANG2.DES ?>
+<?include AT2R-ANG2.DES ?>
+<?include ANG1-7.DES ?>
+<?include ANGIV.DES ?>
+<?include A2Pool.DES ?>
+
+<structure><name> RAS </name>
+
+<definitions>
+
+<block><name> Parms </name>
+
+  <call> ReninTumor.Parms </call>
+  <call> LeftReninSynthesis.Parms </call>
+  <call> RightReninSynthesis.Parms </call>
+
+</block>
+
+<block><name> CalcConc </name>
+
+  <call> ReninPool.CalcConc </call>
+  <call> AGTPlasma.Init </call>
+  <call> ANG1Plasma.Init </call>
+  <call> ANG2Plasma.Init </call>
+  <call> AT1R-ANG2.Init </call>
+  <call> AT2R-ANG2.Init </call>
+  <call> ANG1-7.Init </call>
+  <call> ANGIV.Init </call>
+  <call> A2Pool.CalcConc </call>
+
+</block>
+
+<block><name> Dervs </name>
+
+  <call> LeftReninFree.OutFlux </call>
+  <call> RightReninFree.OutFlux </call>
+
+  <call> LeftReninGranules.OutFlux </call>
+  <call> RightReninGranules.OutFlux </call>
+
+  <call> LeftReninSecretion.Dervs </call>
+  <call> RightReninSecretion.Dervs </call>
+
+  <call> LeftReninSynthesis.Dervs </call>
+  <call> RightReninSynthesis.Dervs </call>
+
+  <call> LeftReninFree.Dervs </call>
+  <call> RightReninFree.Dervs </call>
+  <call> LeftReninGranules.Dervs </call>
+  <call> RightReninGranules.Dervs </call>
+
+  <call> ReninClearance.Dervs </call>
+  <call> ReninPool.Dervs </call>
+  
+  
+  <call> AGTPlasma.Dervs </call>
+  <call> ANG1Plasma.CalcConc </call>
+  <call> ANG2Plasma.CalcConc </call>
+  <call> AT1R-ANG2.CalcConc </call>
+  <call> AT2R-ANG2.CalcConc </call>
+  <call> ANG1-7.CalcConc </call>
+  <call> ANGIV.CalcConc </call>
+
+</block>
+
+</definitions>
+</structure>
+
+End

@@ -1,0 +1,79 @@
+HumMod / ANG1Plasma
+
+Created : 08-Jul-20
+Last Modified : 08-Jul-20
+Author : Anderson White
+Copyright : 2006-2011
+By : University Of Mississippi Medical Center
+
+<structure><name> ANG1Plasma </name>
+
+<variables>
+
+<var><name> Log10Conc </name></var>
+<var><name> c_ACE </name></var>
+<var><name> c_Chym </name></var>
+<var><name> c_NEP </name></var>
+<var><name> HalfLife </name><val> 0.5 </val></var>
+<var><name> InitialConc </name><val> 7.5 </val></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> [ANG1[fmol/L]] </name>
+  <integralname> [ANG1[fmol/L]] </integralname>
+  <dervname> Change </dervname>
+  <errorlim> 500.0 </errorlim>
+</diffeq>
+
+</equations>
+
+<definitions>
+
+<block><name> Init </name>
+  <def><name> [ANG1[fmol/L]] </name><val> InitialConc </val></def>
+</block>
+
+
+<block><name> CalcConc </name>
+
+<conditional>
+  <name> c_ACE</name>
+  <test> Gender.IsFemale </test>
+  <true> 1.4079 </true>
+  <false> 0.88492 </false>
+</conditional>
+
+<conditional>
+  <name> c_Chym </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.1482 </true>
+  <false> 0.09315 </false>
+</conditional>
+
+<conditional>
+  <name> c_NEP </name>
+  <test> Gender.IsFemale </test>
+  <true> 0.060759 </true>
+  <false> 0.038189 </false>
+</conditional>
+
+<def>
+  <name> Change </name>
+  <val> ReninPool.[PRA] - ( ( c_ACE + c_Chym + c_NEP ) * [ANG1[fmol/L]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANG1[fmol/L]] ) </val>
+</def>
+
+<conditional>
+  <name> Log10Conc </name>
+  <test> [ANG1[fmol/L]] GT 1.0 </test>
+  <true> LOG10 ( [ANG1[fmol/L]] ) </true>
+  <false> 0.0 </false>
+</conditional>
+
+</block>
+</definitions>
+</structure>
+
+End
