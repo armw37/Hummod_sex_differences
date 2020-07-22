@@ -1,0 +1,29 @@
+HumMod / Renin
+
+Created : 10-Oct-08
+Last Modified : 26-Jan-10
+Author : Tom Coleman
+Copyright : 2008-2010
+By : University of Mississippi Medical Center
+Schema : DES V1.0
+
+<branch>
+  <name> Hormones_RAS </name>
+  <label> RAS </label>
+  <parent> HORMONESGENERAL </parent>
+</branch>
+
+<leaf>
+  <name> Hormones_RAS_Classic </name>
+  <label> Classic </label>
+  <parent> Hormones_RAS </parent>
+</leaf>
+
+<leaf>
+  <name> Hormones_RAS_Nonclassic </name>
+  <label> NonClassic </label>
+  <parent> Hormones_RAS </parent>
+</leaf>
+
+
+End
