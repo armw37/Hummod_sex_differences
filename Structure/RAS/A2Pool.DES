@@ -11,11 +11,11 @@ By : University Of Mississippi Medical Center
 <variables>
 
 <var><name> [A2(pG/mL)] </name></var>
-<var><name> [A2(fmol/mL)] </name></var>
+<var><name> [A2(fmol/ml)] </name></var>
 <var><name> Log10Conc </name></var>
 <var><name> [A2(pMol/L)] </name></var>
 <constant><name> PG_TO_PMOL </name><val> 0.956 </val></constant>
-<constant><name> FMOL_TO_PG </name><val> 1046000.3 </val></constant>
+<constant><name> FMOL_TO_PG </name><val> 1.0462 </val></constant>
 
 </variables>
 
@@ -24,16 +24,16 @@ By : University Of Mississippi Medical Center
 <block><name> CalcConc </name>
 
 <conditional>
-  <name> [A2(fmol/mL)] </name>
+  <name> [A2(fmol/ml)] </name>
   <test> Gender.IsFemale </test>
-  <true> ANGIV.[ANGIV[fmol/L]] +  ANG1-7.[ANG1-7[fmol/L]] + AT1R-ANG2.[AT1R-ANG2[fmol/L]] +  ANG2Plasma.[ANG2[fmol/L]] + ANG1Plasma.[ANG1[fmol/L]]  </true>
-  <false> ANGIV.[ANGIV[fmol/L]] +  ANG1-7.[ANG1-7[fmol/L]] + AT1R-ANG2.[AT1R-ANG2[fmol/L]] + AT2R-ANG2.[AT2R-ANG2[fmol/L]] + ANG2Plasma.[ANG2[fmol/L]] + ANG1Plasma.[ANG1[fmol/L]] </false>
+  <true> ANGIV.[ANGIV[fmol/ml]] +  ANG1-7.[ANG1-7[fmol/ml]] + AT1R-ANG2.[AT1R-ANG2[fmol/ml]] +  ANG2Plasma.[ANG2[fmol/ml]] + ANG1Plasma.[ANG1[fmol/ml]]  </true>
+  <false> ANGIV.[ANGIV[fmol/ml]] +  ANG1-7.[ANG1-7[fmol/ml]] + AT1R-ANG2.[AT1R-ANG2[fmol/ml]] + AT2R-ANG2.[AT2R-ANG2[fmol/ml]] + ANG2Plasma.[ANG2[fmol/ml]] + ANG1Plasma.[ANG1[fmol/ml]] </false>
 </conditional>
 
 
 <def>
   <name> [A2(pG/mL)] </name>
-  <val> [A2(fmol/mL)] * FMOL_TO_PG </val>
+  <val> [A2(fmol/ml)] * FMOL_TO_PG </val>
 </def>
 
 <def>

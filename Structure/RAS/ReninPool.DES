@@ -45,9 +45,9 @@ Schema : DES V1.0
 
 <curve>
   <name> Baroreceptor </name> 
-  <point><x> 60 </x><y> 65 </y><slope> 0 </slope></point>0.7 0.8
-  <point><x> 80 </x><y> 35 </y><slope> -1.5 </slope></point>0.8
-  <point><x> 100 </x><y> 7.5 </y><slope> 0 </slope></point>1.2
+  <point><x> 60 </x><y> 6.5 </y><slope> 0 </slope></point>0.7 0.8
+  <point><x> 75 </x><y> 4 </y><slope> -1.5 </slope></point>0.8
+  <point><x> 100 </x><y> 1 </y><slope> 0 </slope></point>1.2
 </curve>
 
 </functions>
@@ -80,7 +80,7 @@ Schema : DES V1.0
 
 <def>
   <name> [PRA] </name>
-  <val> ( ( ( Mass / ANG1_MW ) * ( 1 / 60 ) ) * 1000000 ) / VolumeDistribution </val>
+  <val> ( ( ( ( Mass / ANG1_MW ) * ( 1 / 60 ) ) * 1000000 ) / VolumeDistribution ) * BaroreceptorEffect </val>
 </def>
 
 <conditional>

@@ -13,7 +13,7 @@ By : University Of Mississippi Medical Center
 <?include Function\Function.DES ?>
 <?include Metabolism\Metabolism.DES ?>
 <?include Nerves\Nerves.DES ?>
-<!-- <?include VascularSegments\VascularSegments.DES ?> -->
+<?include VascularSegments\VascularSegments.DES ?>
 <?include Size\Size.DES ?>
 <?include Structure\Structure.DES ?>
 <?include NephronCount\NephronCount.DES ?>

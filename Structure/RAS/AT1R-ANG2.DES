@@ -20,8 +20,8 @@ By : University Of Mississippi Medical Center
 <equations>
 
 <diffeq>
-  <name> [AT1R-ANG2[fmol/L]] </name>
-  <integralname> [AT1R-ANG2[fmol/L]] </integralname>
+  <name> [AT1R-ANG2[fmol/ml]] </name>
+  <integralname> [AT1R-ANG2[fmol/ml]] </integralname>
   <dervname> Change </dervname>
   <errorlim> 500.0 </errorlim>
 </diffeq>
@@ -31,7 +31,7 @@ By : University Of Mississippi Medical Center
 <definitions>
 
 <block><name> Init </name>
-  <def><name> [AT1R-ANG2[fmol/L]] </name><val> InitialConc </val></def>
+  <def><name> [AT1R-ANG2[fmol/ml]] </name><val> InitialConc </val></def>
 </block>
 
 <block><name> CalcConc </name>
@@ -45,13 +45,13 @@ By : University Of Mississippi Medical Center
 
 <def>
   <name> Change </name>
-  <val> ( c_AT1R * ANG2Plasma.[ANG2[fmol/L]] ) - ( ( LOG ( 2 ) / HalfLife ) * [AT1R-ANG2[fmol/L]] ) </val>
+  <val> ( c_AT1R * ANG2Plasma.[ANG2[fmol/ml]] ) - ( ( LOG ( 2 ) / HalfLife ) * [AT1R-ANG2[fmol/ml]] ) </val>
 </def>
 
 <conditional>
   <name> Log10Conc </name>
-  <test> [AT1R-ANG2[fmol/L]] GT 1.0 </test>
-  <true> LOG10 ( [AT1R-ANG2[fmol/L]] ) </true>
+  <test> [AT1R-ANG2[fmol/ml]] GT 1.0 </test>
+  <true> LOG10 ( [AT1R-ANG2[fmol/ml]] ) </true>
   <false> 0.0 </false>
 </conditional>
 

@@ -40,6 +40,8 @@ Schema : DES V1.0
   <call> RightReninGranules.Init </call>
   <call> LeftReninGranules.Init </call>
   <call> ReninPool.Init </call>
+  <call> RAS.Init </call>
+
 </block>
 
 </definitions>

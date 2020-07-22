@@ -10,7 +10,7 @@ By : University Of Mississippi Medical Center
 
 <?include ADH\ADH.DES ?>
 <?include Aldosterone\Aldosterone.DES ?>
-<!-- <?include Angiotensin\Angiotensin.DES ?> -->
+<?include Angiotensin\Angiotensin.DES ?>
 <?include ANP\ANP.DES ?>
 <?include Epinephrine\Epinephrine.DES ?>
 <?include Erythropoietin\Erythropoietin.DES ?>

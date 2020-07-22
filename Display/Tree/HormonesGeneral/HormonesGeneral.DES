@@ -36,7 +36,7 @@ By : Tom Coleman
 <?include Insulin.DES ?>
 <?include Leptin.DES ?>
 <?include ParathyroidHormone.DES ?>
-<?include Renin.DES ?>
+<?include RAS.DES ?>
 <?include ThyroidGland.DES ?>
 <?include VitaminD.DES ?>
 

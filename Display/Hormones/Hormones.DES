@@ -26,7 +26,7 @@ By : University of Mississippi Medical Center
 <?include Insulin\Insulin.DES ?>
 <?include Leptin\Leptin.DES ?>
 <?include ParathyroidHormone\ParathyroidHormone.DES ?>
-<!-- <?include Renin\Renin.DES ?> -->
+<?include RAS\RAS.DES ?>
 <?include ThyroidGland\ThyroidGland.DES ?>
 <?include VitaminD\VitaminD.DES ?>
 

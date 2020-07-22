@@ -22,8 +22,8 @@ By : University Of Mississippi Medical Center
 <equations>
 
 <diffeq>
-  <name> [ANG1[fmol/L]] </name>
-  <integralname> [ANG1[fmol/L]] </integralname>
+  <name> [ANG1[fmol/ml]] </name>
+  <integralname> [ANG1[fmol/ml]] </integralname>
   <dervname> Change </dervname>
   <errorlim> 500.0 </errorlim>
 </diffeq>
@@ -33,7 +33,7 @@ By : University Of Mississippi Medical Center
 <definitions>
 
 <block><name> Init </name>
-  <def><name> [ANG1[fmol/L]] </name><val> InitialConc </val></def>
+  <def><name> [ANG1[fmol/ml]] </name><val> InitialConc </val></def>
 </block>
 
 
@@ -62,13 +62,13 @@ By : University Of Mississippi Medical Center
 
 <def>
   <name> Change </name>
-  <val> ReninPool.[PRA] - ( ( c_ACE + c_Chym + c_NEP ) * [ANG1[fmol/L]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANG1[fmol/L]] ) </val>
+  <val> ReninPool.[PRA] - ( ( c_ACE + c_Chym + c_NEP ) * [ANG1[fmol/ml]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANG1[fmol/ml]] ) </val>
 </def>
 
 <conditional>
   <name> Log10Conc </name>
-  <test> [ANG1[fmol/L]] GT 1.0 </test>
-  <true> LOG10 ( [ANG1[fmol/L]] ) </true>
+  <test> [ANG1[fmol/ml]] GT 1.0 </test>
+  <true> LOG10 ( [ANG1[fmol/ml]] ) </true>
   <false> 0.0 </false>
 </conditional>
 

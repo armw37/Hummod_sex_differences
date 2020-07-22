@@ -20,8 +20,8 @@ By : University Of Mississippi Medical Center
 <equations>
 
 <diffeq>
-  <name> [AGT[fmol/L]] </name>
-  <integralname> [AGT[fmol/L]] </integralname>
+  <name> [AGT[fmol/ml]] </name>
+  <integralname> [AGT[fmol/ml]] </integralname>
   <dervname> Change </dervname>
   <errorlim> 5.0 </errorlim>
 </diffeq>
@@ -31,7 +31,7 @@ By : University Of Mississippi Medical Center
 <definitions>
 
 <block><name> Init </name>
-  <def><name> [AGT[fmol/L]] </name><val> InitialConc </val></def>
+  <def><name> [AGT[fmol/ml]] </name><val> InitialConc </val></def>
 </block>
 
 
@@ -46,13 +46,13 @@ By : University Of Mississippi Medical Center
 
 <def>
   <name> Change </name>
-  <val> SecretionRate - ReninPool.[PRA] - ( ( LOG ( 2 ) / HalfLife ) * [AGT[fmol/L]] ) </val>
+  <val> SecretionRate - ReninPool.[PRA] - ( ( LOG ( 2 ) / HalfLife ) * [AGT[fmol/ml]] ) </val>
 </def>
 
 <conditional>
   <name> Log10Conc </name>
-  <test> [AGT[fmol/L]] GT 1.0 </test>
-  <true> LOG10 ( [AGT[fmol/L]] ) </true>
+  <test> [AGT[fmol/ml]] GT 1.0 </test>
+  <true> LOG10 ( [AGT[fmol/ml]] ) </true>
   <false> 0.0 </false>
 </conditional>
 

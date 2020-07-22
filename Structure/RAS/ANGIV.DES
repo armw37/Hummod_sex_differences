@@ -20,8 +20,8 @@ By : University Of Mississippi Medical Center
 <equations>
 
 <diffeq>
-  <name> [ANGIV[fmol/L]] </name>
-  <integralname> [ANGIV[fmol/L]] </integralname>
+  <name> [ANGIV[fmol/ml]] </name>
+  <integralname> [ANGIV[fmol/ml]] </integralname>
   <dervname> Change </dervname>
   <errorlim> 500.0 </errorlim>
 </diffeq>
@@ -31,7 +31,7 @@ By : University Of Mississippi Medical Center
 <definitions>
 
 <block><name> Init </name>
-  <def><name> [ANGIV[fmol/L]] </name><val> InitialConc </val></def>
+  <def><name> [ANGIV[fmol/ml]] </name><val> InitialConc </val></def>
 </block>
 
 <block><name> CalcConc </name>
@@ -45,13 +45,13 @@ By : University Of Mississippi Medical Center
 
 <def>
   <name> Change </name>
-  <val> ( c_IIIV * ANG2Plasma.[ANG2[fmol/L]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANGIV[fmol/L]]  ) </val>
+  <val> ( c_IIIV * ANG2Plasma.[ANG2[fmol/ml]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANGIV[fmol/ml]]  ) </val>
 </def>
 
 <conditional>
   <name> Log10Conc </name>
-  <test> [ANGIV[fmol/L]] GT 1.0 </test>
-  <true> LOG10 ( [ANGIV[fmol/L]] ) </true>
+  <test> [ANGIV[fmol/ml]] GT 1.0 </test>
+  <true> LOG10 ( [ANGIV[fmol/ml]] ) </true>
   <false> 0.0 </false>
 </conditional>
 

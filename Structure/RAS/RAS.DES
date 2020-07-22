@@ -9,6 +9,7 @@ By : University Of Mississippi Medical Center
 <?path Structure\RAS\ ?>
 
 <?include ReninPool.DES ?>
+<?include A2Pump.DES ?>
 <?include LeftReninSecretion.DES ?>
 <?include RightReninSecretion.DES ?>
 <?include LeftReninSynthesis.DES ?>
@@ -36,8 +37,21 @@ By : University Of Mississippi Medical Center
 
 <definitions>
 
+<block><name> Init </name>
+
+  <call> AGTPlasma.Init </call>
+  <call> ANG1Plasma.Init </call>
+  <call> ANG2Plasma.Init </call>
+  <call> AT1R-ANG2.Init </call>
+  <call> AT2R-ANG2.Init </call>
+  <call> ANG1-7.Init </call>
+  <call> ANGIV.Init </call>
+
+</block>
+
 <block><name> Parms </name>
 
+  <call> A2Pump.Parms </call>
   <call> ReninTumor.Parms </call>
   <call> LeftReninSynthesis.Parms </call>
   <call> RightReninSynthesis.Parms </call>
@@ -47,13 +61,6 @@ By : University Of Mississippi Medical Center
 <block><name> CalcConc </name>
 
   <call> ReninPool.CalcConc </call>
-  <call> AGTPlasma.Init </call>
-  <call> ANG1Plasma.Init </call>
-  <call> ANG2Plasma.Init </call>
-  <call> AT1R-ANG2.Init </call>
-  <call> AT2R-ANG2.Init </call>
-  <call> ANG1-7.Init </call>
-  <call> ANGIV.Init </call>
   <call> A2Pool.CalcConc </call>
 
 </block>

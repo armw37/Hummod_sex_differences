@@ -17,9 +17,9 @@ By : University Of Mississippi Medical Center
 <?include Glomerulus\Glomerulus.DES ?>
 <?include Interstitium\Interstitium.DES ?>
 <?include LoopOfHenle\LoopOfHenle.DES ?>
-<!-- <?include MaculaDensa\MaculaDensa.DES ?> -->
+<?include MaculaDensa\MaculaDensa.DES ?>
 <?include Medulla\Medulla.DES ?>
-<!-- <?include ProximalTubule\ProximalTubule.DES ?> -->
+<?include ProximalTubule\ProximalTubule.DES ?>
 <?include VasaRecta\VasaRecta.DES ?>
 
 End

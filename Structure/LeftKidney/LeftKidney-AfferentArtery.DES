@@ -259,12 +259,12 @@ By : University Of Mississippi Medical Center
 
 <def><name> ANPEffect </name><val> ANPEffect [ ANPPool.[ANP] ] </val></def>
 
-<def><name> psi_AT1R </name><val> A + B * AT1R-ANG2.[AT1R-ANG2[fmol/L]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/L]] </val></def>
+<def><name> psi_AT1R </name><val> A + B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] </val></def>
 
 <conditional>
   <name> psi_AT2R </name>
   <test> Gender.IsFemale </test>
-  <true> 0.025 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/L]] ) + 1 </true>
+  <true> 0.025 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 </true>
   <false> 1 </false>
 </conditional>
 
