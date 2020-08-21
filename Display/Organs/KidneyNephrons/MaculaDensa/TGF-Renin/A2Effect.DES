@@ -28,7 +28,7 @@ Schema : 2005.0
   <row> 2.4 </row><col> 1.0 </col><high> 7 </high><wide> 28 </wide>
   <leftmargin> 6 </leftmargin>
   <xaxis>
-    <name> A2Pool.Log10Conc </name>
+    <name> AT1R-ANG2.Log10Conc </name>
     <label> [A2] </label>
     <scale><min> 0 </min><max> 3 </max><inc> 1 </inc></scale>
   </xaxis>
@@ -41,7 +41,7 @@ Schema : 2005.0
 
 <showvalue>
    <row> 9.8 </row><col> 1.0 </col>
-   <name> A2Pool.Log10Conc </name>
+   <name> AT1R-ANG2.Log10Conc </name>
    <format><decimal> 1 </decimal></format>
    <label> Log10 [A2] </label>
 </showvalue>
@@ -61,7 +61,7 @@ Schema : 2005.0
   <leftmargin> 6 </leftmargin>
 
   <xaxis>
-    <name> A2Pool.Log10Conc </name>
+    <name> AT1R-ANG2.Log10Conc </name>
     <label> [A2] </label>
     <scale><min> 0 </min><max> 3 </max><inc> 1 </inc></scale>
   </xaxis>

@@ -1,0 +1,97 @@
+<script>
+<launch>
+  <solver> Model Solver.EXE </solver>
+  <model> HumMod.DES </model>
+</launch>
+
+<?include var_rost_na_sens.Script ?>
+
+<restart/>
+
+<!-- This the 180 mmol/day diet -->
+
+<loadics>
+<filename> Scripts\male_n_na_sens_ics.ICS </filename>
+</loadics>
+
+<gofor>
+  <solutionint> 43200 </solutionint>
+  <displayint> 1440 </displayint>
+</gofor>  
+
+<dumpsolution>
+  <filename> Scripts\data\Male\normal_4wk_n.txt </filename>
+</dumpsolution>
+
+<restart/>
+
+<!-- This the 30 mmol/day diet -->
+
+<loadics>
+<filename> Scripts\male_n_na_sens_ics.ICS </filename>
+</loadics>
+
+<setvalue>
+  <var> DietGoalElectrolytes.Salt_mMol/Day </var>
+  <val> 30 </val>
+</setvalue>  
+
+<gofor>
+  <solutionint> 43200 </solutionint>
+  <displayint> 1440 </displayint>
+</gofor>  
+
+<dumpsolution>
+  <filename> Scripts\data\Male\normal_4wk_low.txt </filename>
+</dumpsolution>
+
+<restart/>
+
+<!-- This the 500 mmol/day diet -->
+
+<loadics>
+<filename> Scripts\male_n_na_sens_ics.ICS </filename>
+</loadics>
+
+<setvalue>
+  <var> DietGoalElectrolytes.Salt_mMol/Day </var>
+  <val> 500 </val>
+</setvalue>  
+
+<gofor>
+  <solutionint> 43200 </solutionint>
+  <displayint> 1440 </displayint>
+</gofor>  
+
+<dumpsolution>
+  <filename> Scripts\data\Male\normal_4wk_h.txt </filename>
+</dumpsolution>
+
+<restart/>
+
+<!-- This the 1000 mmol/day diet -->
+
+<loadics>
+<filename> Scripts\male_n_na_sens_ics.ICS </filename>
+</loadics>
+
+<setvalue>
+  <var> DietGoalElectrolytes.Salt_mMol/Day </var>
+  <val> 1000 </val>
+</setvalue>  
+
+<gofor>
+  <solutionint> 43200 </solutionint>
+  <displayint> 1440 </displayint>
+</gofor>  
+
+<dumpsolution>
+  <filename> Scripts\data\Male\normal_4wk_hh.txt </filename>
+</dumpsolution>
+
+
+<exit/>
+
+</script>
+
+

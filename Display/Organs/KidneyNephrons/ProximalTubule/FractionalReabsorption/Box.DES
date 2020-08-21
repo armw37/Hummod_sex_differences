@@ -35,7 +35,7 @@ Schema : DES V1.0
   <leftmargin> 5 </leftmargin>
 
   <xaxis>
-    <name> A2Pool.Log10Conc </name>
+    <name> AT1R-ANG2.Log10Conc </name>
     <label> LOG10 [A2] </label>
     <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
   </xaxis>
@@ -50,7 +50,7 @@ Schema : DES V1.0
 
 <showvalue>
   <row> 13.2 </row><col> 1 </col>
-  <name> A2Pool.Log10Conc </name>
+  <name> AT1R-ANG2.Log10Conc </name>
   <format><decimal> 1 </decimal></format>
   <label> LOG10 [A2] </label>
 </showvalue>
@@ -208,7 +208,7 @@ Right
   <leftmargin> 5 </leftmargin>
 
   <xaxis>
-    <name> A2Pool.Log10Conc </name>
+    <name> AT1R-ANG2.Log10Conc </name>
     <label> LOG10 [A2] </label>
     <scale><min> 0 </min><max> 2 </max><inc> 1 </inc></scale>
   </xaxis>
@@ -223,7 +223,7 @@ Right
 
 <showvalue>
   <row> 13.2 </row><col> 1 </col>
-  <name> A2Pool.Log10Conc </name>
+  <name> AT1R-ANG2.Log10Conc </name>
   <format><decimal> 1 </decimal></format>
   <label> LOG10 [A2] </label>
 </showvalue>

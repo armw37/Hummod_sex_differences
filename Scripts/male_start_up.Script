@@ -1,0 +1,32 @@
+<script>
+
+<launch>
+  <solver> Model Solver.EXE </solver>
+  <model> HumMod.DES </model>
+</launch>
+
+<restart/>
+
+<setvalue><var> System.X </var><val> -10080 </val> </setvalue>
+
+<setvalue>
+  <var> Context-Gender.IsMale </var>
+  <val> 1.0 </val>
+</setvalue>
+
+<setvalue>
+  <var> Gender.IsMale </var>
+  <val> 1.0 </val>
+</setvalue>
+
+
+<gofor>
+  <solutionint> 10080 </solutionint>
+  <displayint>  1440 </displayint>
+</gofor>
+
+<saveics>
+  <filename> Scripts\male_n.ICS </filename>
+</saveics>
+<exit/>
+</script>

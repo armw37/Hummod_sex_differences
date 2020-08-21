@@ -55,11 +55,20 @@ By : University Of Mississippi Medical Center
   <point><x> 3.0 </x><y> 0.4 </y><slope>  0.0 </slope></point>
 </curve>
 
+<!--
 <curve>
   <name> V0_A2_Effect </name>
   <point><x> 0.0 </x><y> 1.05 </y><slope>  0.0 </slope></point>
   <point><x> 1.3 </x><y> 1.00 </y><slope> -0.10 </slope></point>
   <point><x> 3.0 </x><y> 0.85 </y><slope>  0.0 </slope></point>
+</curve>
+-->
+
+<curve>
+<name> V0_A2_Effect </name>
+<point><x> 0 </x><y> 1.05 </y><slope> 0 </slope></point>
+<point><x> 1.223001718159923 </x><y> 1.00 </y><slope> -0.10629584412649559 </slope></point>
+<point><x> 2.923001718159923 </x><y> 0.85 </y><slope> 0 </slope></point>
 </curve>
 
 <curve>
@@ -112,7 +121,7 @@ By : University Of Mississippi Medical Center
 
 <def>
   <name> V0_A2_Effect </name>
-  <val> V0_A2_Effect [ A2Pool.Log10Conc ] </val>
+  <val> V0_A2_Effect [ AT1R-ANG2.Log10Conc ] </val>
 </def>
 
 <def>

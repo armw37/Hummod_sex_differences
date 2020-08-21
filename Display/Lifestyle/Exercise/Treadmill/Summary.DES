@@ -122,7 +122,7 @@ By : University of Mississippi Medical Center
 
 <actionbutton>
    <row> 18.2 </row><col> 1.0 </col>
-   <blockname> ResetTime&Distance </blockname>
+   <blockname> ResetTime_Distance </blockname>
    <label> Reset Time And Distance </label>
 </actionbutton>
 

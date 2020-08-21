@@ -17,7 +17,7 @@ By : University of Mississippi Medical Center
 <?include GITract\GITract.DES ?>
 <?include Hypothalamus\Hypothalamus.DES ?>
 <?include Kidney\Kidney.DES ?>
-<?include KidneyNephrons\KidneyNephrons.DES ?> 
+<?include KidneyNephrons\KidneyNephrons.DES ?>
 <?include KidneyExcretion\KidneyExcretion.DES ?>
 <?include KidneyMetabolism\KidneyMetabolism.DES ?>
 <?include LeftHeart\LeftHeart.DES ?>

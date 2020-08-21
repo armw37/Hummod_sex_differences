@@ -197,10 +197,18 @@ By : Tom Coleman
 
 <functions>
 
+<!--
 <curve>
   <name> A2Effect </name>
   <point><x> 1.7 </x><y> 1.0 </y><slope> 0 </slope></point>
   <point><x> 2.3 </x><y> 1.4 </y><slope> 0 </slope></point>
+</curve>
+-->
+
+<curve>
+<name> A2Effect </name>
+<point><x> 1.640684380959299 </x><y> 1.0 </y><slope> 0 </slope></point>
+<point><x> 2.2406843809592987 </x><y> 1.4 </y><slope> 0 </slope></point>
 </curve>
 
 <curve>
@@ -264,7 +272,14 @@ By : Tom Coleman
       <val> ApneaEffect [ Apnea.EventRate ] </val>
     </def>
 
+    <def>
+      <name> A2Effect </name>
+      <val> A2Effect [ AT1R-ANG2.Log10Conc ] </val>
+    </def>
+
+<!--
 <def><name> A2Effect </name><val> ( A2_A * ( ( A2Pool.Log10Conc ^ A2_m ) / ( ( A2Pool.Log10Conc ^ A2_m ) + ( A2_S ^ A2_m ) ) ) ) + A2_B  </val></def>
+-->
 
 <def><name> dA2A </name><val> 0.05 * ( A2_ATarget - A2_A ) </val></def>
 <def><name> dA2m </name><val> 0.05 * ( A2_mTarget - A2_m ) </val></def>

@@ -25,7 +25,7 @@ By : University Of Mississippi Medical Center
   <name> [ANG1[fmol/ml]] </name>
   <integralname> [ANG1[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 500.0 </errorlim>
+  <errorlim> 0.075 </errorlim>
 </diffeq>
 
 </equations>

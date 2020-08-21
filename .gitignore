@@ -1,0 +1,6 @@
+# any ics files
+*.ICS
+# any log files
+*.LOG
+# any vim generated extra files
+*.*~

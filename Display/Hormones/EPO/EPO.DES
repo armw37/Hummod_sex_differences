@@ -6,7 +6,7 @@ Author : Tom Coleman
 Copyright : 2013-2013
 By : Tom Coleman
 
-<?path Display\Hormones\EPO\ ?> -->
+<?path Display\Hormones\EPO\ ?>
 
 <?include Pool\Pool.DES ?>
 <?include Secretion\Secretion.DES ?>

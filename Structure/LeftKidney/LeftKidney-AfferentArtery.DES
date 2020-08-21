@@ -19,7 +19,7 @@ By : University Of Mississippi Medical Center
 <constant><name> A </name><val> 0.8 </val></constant>
 <constant><name> B </name><val> 0.055 </val></constant>
 <constant><name> C </name><val> 0.185 </val></constant>
-<constant><name> AT2R_eq </name><val> 0 </val></constant>
+<constant><name> AT2R_eq </name><val> 6.7 </val></constant>
 <var><name> psi_AT1R </name></var>
 <var><name> psi_AT2R </name></var>
 
@@ -259,21 +259,12 @@ By : University Of Mississippi Medical Center
 
 <def><name> ANPEffect </name><val> ANPEffect [ ANPPool.[ANP] ] </val></def>
 
-<def><name> psi_AT1R </name><val> A + B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] </val></def>
+<def><name> psi_AT1R </name><val> 1 / ( A + ( B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] ) - ( C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] ) ) </val></def>
 
 <conditional>
   <name> psi_AT2R </name>
   <test> Gender.IsFemale </test>
-  <true> 0.025 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 </true>
-  <false> 1 </false>
-</conditional>
-
-<!-- First Run  -->
-
-<conditional>
-  <name> psi_AT2R </name>
-  <test> Gender.IsFemale </test>
-  <true> 1 </true>
+  <true> 1 / ( 0.025 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 ) </true>
   <false> 1 </false>
 </conditional>
 

@@ -14,7 +14,7 @@ By : University Of Mississippi Medical Center
 <var><name> c_ACE2 </name></var>
 <var><name> c_NEP </name></var>
 <var><name> HalfLife </name><val> 30 </val></var>
-<var><name> InitialConc </name><val> 100.0 </val></var>
+<var><name> InitialConc </name><val> 10.0 </val></var>
 
 </variables>
 
@@ -24,7 +24,7 @@ By : University Of Mississippi Medical Center
   <name> [ANG1-7[fmol/ml]] </name>
   <integralname> [ANG1-7[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 500.0 </errorlim>
+  <errorlim> 0.1 </errorlim>
 </diffeq>
 
 </equations>

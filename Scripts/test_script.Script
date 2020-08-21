@@ -1,0 +1,56 @@
+<script>
+<launch>
+  <solver> Model Solver.EXE </solver>
+  <model> HumMod.DES </model>
+</launch>
+
+<?include varroster2.Script ?>
+
+<restart/>
+<?include init.Script ?>
+ 
+
+
+<gofor>
+  <solutionint> 43200 </solutionint>
+  <displayint> 1440 </displayint>
+</gofor>  
+
+<!--
+<gofor>
+  <solutionint> 100 </solutionint>
+  <displayint> 100 </displayint>
+</gofor>
+
+<gofor>
+  <solutionint> 620 </solutionint>
+  <displayint> 620 </displayint>
+</gofor>
+
+
+<gofor>
+  <solutionint> 15 </solutionint>
+  <displayint> 5 </displayint>
+</gofor>
+
+<gofor>
+  <solutionint> 15 </solutionint>
+  <displayint> 15 </displayint>
+</gofor>
+
+<gofor>
+  <solutionint> 30 </solutionint>
+  <displayint> 30 </displayint>
+</gofor>
+-->
+
+<dumpsolution>
+  <filename> Scripts\data\test_NA.txt </filename>
+</dumpsolution>
+
+
+<exit/>
+
+</script>
+
+

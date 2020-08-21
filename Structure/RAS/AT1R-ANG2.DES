@@ -23,7 +23,7 @@ By : University Of Mississippi Medical Center
   <name> [AT1R-ANG2[fmol/ml]] </name>
   <integralname> [AT1R-ANG2[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 500.0 </errorlim>
+  <errorlim> 0.1 </errorlim>
 </diffeq>
 
 </equations>
@@ -32,6 +32,14 @@ By : University Of Mississippi Medical Center
 
 <block><name> Init </name>
   <def><name> [AT1R-ANG2[fmol/ml]] </name><val> InitialConc </val></def>
+
+  <conditional>
+    <name> Log10Conc </name>
+    <test> [AT1R-ANG2[fmol/ml]] GT 1.0 </test>
+    <true> LOG10 ( [AT1R-ANG2[fmol/ml]] ) </true>
+    <false> 0.0 </false>
+  </conditional>
+
 </block>
 
 <block><name> CalcConc </name>

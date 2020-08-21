@@ -19,7 +19,9 @@ By : University Of Mississippi Medical Center
 <var><name> c_AT2R </name></var>
 <var><name> HalfLife </name><val> 0.66 </val></var>
 <var><name> InitialConc </name><val> 5 </val></var>
-
+<parm><name> Clamp </name><val> FALSE </val></parm>
+<parm><name> Level </name><val> 0.0 </val></parm>
+<constant><name> FMOL_TO_PG </name><val> 1.0462 </val></constant>
 </variables>
 
 <equations>
@@ -28,7 +30,7 @@ By : University Of Mississippi Medical Center
   <name> [ANG2[fmol/ml]] </name>
   <integralname> [ANG2[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 500.0 </errorlim>
+  <errorlim> 0.05 </errorlim>
 </diffeq>
 
 </equations>
@@ -87,6 +89,13 @@ By : University Of Mississippi Medical Center
   <name> Change </name>
   <val> ( ( c_ACE + c_Chym ) * ANG1Plasma.[ANG1[fmol/ml]] ) - ( ( c_ACE2 + c_IIIV + c_AT1R + c_AT2R ) * [ANG2[fmol/ml]] ) - ( ( LOG ( 2 ) / HalfLife ) * [ANG2[fmol/ml]] ) </val>
 </def>
+
+<conditional>
+  <name> [ANG2[fmol/ml]] </name>
+  <test> Clamp </test>
+  <true> Level / FMOL_TO_PG </true>
+  <false> [ANG2[fmol/ml]] </false>
+</conditional>
 
 <conditional>
   <name> Log10Conc </name>

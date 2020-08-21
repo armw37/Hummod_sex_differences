@@ -27,7 +27,7 @@ By : University Of Mississippi Medical Center
   <name> Mass </name>
   <integralname> Mass </integralname>
   <dervname> Change </dervname>
-  <errorlim> 4350.0 </errorlim>
+  <errorlim> 435.0 </errorlim>
 </diffeq>
 
 </equations>

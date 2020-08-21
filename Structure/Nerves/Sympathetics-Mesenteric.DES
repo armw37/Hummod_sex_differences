@@ -34,10 +34,18 @@ By : Tom Coleman
 
 <functions>
 
+<!--
 <curve>
   <name> A2Effect </name>
   <point><x> 1.7 </x><y> 1.0 </y><slope> 0 </slope></point>
   <point><x> 2.3 </x><y> 1.4 </y><slope> 0 </slope></point>
+</curve>
+-->
+
+<curve>
+<name> A2Effect </name>
+<point><x> 1.623001718159923 </x><y> 1.0 </y><slope> 0 </slope></point>
+<point><x> 2.2230017181599226 </x><y> 1.4 </y><slope> 0 </slope></point>
 </curve>
 
 <curve>
@@ -83,7 +91,7 @@ By : Tom Coleman
   <true>
     <def>
       <name> A2Effect </name>
-      <val> A2Effect [ A2Pool.Log10Conc ] </val>
+      <val> A2Effect [ AT1R-ANG2.Log10Conc ] </val>
     </def>
 
     <def>

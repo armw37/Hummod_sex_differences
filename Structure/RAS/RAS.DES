@@ -31,7 +31,7 @@ By : University Of Mississippi Medical Center
 <?include AT2R-ANG2.DES ?>
 <?include ANG1-7.DES ?>
 <?include ANGIV.DES ?>
-<?include A2Pool.DES ?>
+<!-- <?include A2Pool.DES ?> -->
 
 <structure><name> RAS </name>
 
@@ -61,7 +61,7 @@ By : University Of Mississippi Medical Center
 <block><name> CalcConc </name>
 
   <call> ReninPool.CalcConc </call>
-  <call> A2Pool.CalcConc </call>
+  <!-- <call> A2Pool.CalcConc </call> -->
 
 </block>
 

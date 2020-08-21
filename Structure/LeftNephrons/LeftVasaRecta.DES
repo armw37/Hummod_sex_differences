@@ -200,11 +200,20 @@ By : University Of Mississippi Medical Center
   <point><x> 2000 </x><y> 0.8 </y><slope> 0 </slope></point>
 </curve>
 
+<!--
 <curve>
   <name> A2OnConductance </name>
   <point><x> 0.0 </x><y> 1.3 </y><slope> 0 </slope></point>
   <point><x> 1. </x><y> 1.0 </y><slope> -0.6 </slope></point>
   <point><x> 2.0 </x><y> 0.5 </y><slope> 0 </slope></point>
+</curve>
+-->
+
+<curve>
+<name> A2OnConductance </name>
+<point><x> 0 </x><y> 1.3 </y><slope> 0 </slope></point>
+<point><x> 0.940684380959299 </x><y> 1.0 </y><slope> -0.6378334881973611 </slope>
+</point><point><x> 1.9406843809592988 </x><y> 0.5 </y><slope> 0 </slope></point>
 </curve>
 
 <curve>
@@ -223,7 +232,7 @@ By : University Of Mississippi Medical Center
 
 <def><name> ADHEffect </name><val> ADHOnConductance [ LeftNephronADH.[ADH] ] </val></def>
 <def><name> OsmEffect </name><val> OsmOnConductance [ LeftMedulla.[Osm] ] </val></def>
-<def><name> A2Effect </name><val> A2OnConductance [ A2Pool.Log10Conc ] </val></def>
+<def><name> A2Effect </name><val> A2OnConductance [ AT1R-ANG2.Log10Conc ] </val></def>
 <def><name> SympsEffect </name><val> SympsOnConductance [ LeftKidney-AlphaReceptors.Activity ] </val></def>
 
 
@@ -248,7 +257,9 @@ By : University Of Mississippi Medical Center
 <def><name> dA2S </name><val> 0.05 * ( A2_STarget - A2_S ) </val></def>
 <def><name> dA2B </name><val> 0.05 * ( A2_BTarget - A2_B ) </val></def>
 
+<!--
 <def><name> A2Effect </name><val> ( A2_A * ( ( A2Pool.Log10Conc ^ A2_m ) / ( ( A2Pool.Log10Conc ^ A2_m ) + ( A2_S ^ A2_m ) ) ) ) + A2_B  </val></def>
+-->
 
 <def><name> dSympsA </name><val> 0.05 * ( Symps_ATarget - Symps_A ) </val></def>
 <def><name> dSympsm </name><val> 0.05 * ( Symps_mTarget - Symps_m ) </val></def>
@@ -256,9 +267,6 @@ By : University Of Mississippi Medical Center
 <def><name> dSympsB </name><val> 0.05 * ( Symps_BTarget - Symps_B ) </val></def>
 
 <def><name> SympsEffect </name><val> ( Symps_A * ( ( LeftKidney-AlphaReceptors.Activity ^ Symps_m ) / ( ( LeftKidney-AlphaReceptors.Activity ^ Symps_m ) + ( Symps_S ^ Symps_m ) ) ) ) + Symps_B  </val></def>
-
-
-
 
 
 <def>

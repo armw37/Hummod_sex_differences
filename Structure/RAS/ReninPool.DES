@@ -36,7 +36,7 @@ Schema : DES V1.0
   <name> Mass </name>
   <integralname> Mass </integralname>
   <dervname> Change </dervname>
-  <errorlim> 9000.0 </errorlim>
+  <errorlim> 90.0 </errorlim>
 </diffeq>
 
 </equations>
@@ -46,7 +46,7 @@ Schema : DES V1.0
 <curve>
   <name> Baroreceptor </name> 
   <point><x> 60 </x><y> 6.5 </y><slope> 0 </slope></point>0.7 0.8
-  <point><x> 75 </x><y> 4 </y><slope> -1.5 </slope></point>0.8
+  <point><x> 75 </x><y> 4 </y><slope> -0.16 </slope></point>0.8
   <point><x> 100 </x><y> 1 </y><slope> 0 </slope></point>1.2
 </curve>
 

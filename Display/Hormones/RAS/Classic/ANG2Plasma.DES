@@ -42,44 +42,32 @@ By : University Of Mississippi Medical Center
   </yaxis>
 </showgraph>
 
-<structurename> A2Pump </structurename>
+<structurename> ANG2Plasma </structurename>
 
 <radiobuttons>
   <row> 13.8 </row><col> 1.0 </col>
-  <name> Switch </name>
+  <name> Clamp </name>
   <listname> Common.Switch </listname>
-  <label> Switch </label>
+  <label> Clamp </label>
 </radiobuttons>
 
 <repeatlist>
-  <name> A2Pump.Setting </name>
-  <repeat><reps> 50 </reps><stepsize>  10.0 </stepsize></repeat>
-  <repeat><reps> 35 </reps><stepsize> 100.0 </stepsize></repeat>
+  <name> Level </name>
+  <repeat><reps> 100 </reps><stepsize> 1.0 </stepsize></repeat>
 </repeatlist>
 
 <slidebar>
-  <row> 15.4 </row><col> 1.0 </col>
-  <name> Setting </name>
-  <listname> A2Pump.Setting </listname>
-  <label> Setting </label>
+  <row> 15 </row><col> 1.0 </col>
+  <name> Level </name>
+  <listname> Level </listname>
+  <label> Level </label>
 </slidebar>
-
-<showvalue>
-   <row> 16.8 </row><col> 1.0 </col>
-   <name> Rate </name>
-   <format><integer/></format>
-   <label> Rate </label>
-</showvalue>
 
 <infobutton>
   <row> 1.2 </row>
   <col> 26.0 </col>
 
-  <line> ANGII pump rate units </line>
-  <line> are fmol/min. </line>
-  <line> </line>
-  <line> Normal ANGII formation </line>
-  <line> rate is 5 fmol/min. </line>
+  <line> ANGII clamp is pg/ml </line>
 </infobutton>
 
 

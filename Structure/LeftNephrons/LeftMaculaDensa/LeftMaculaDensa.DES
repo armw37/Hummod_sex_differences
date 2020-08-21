@@ -10,7 +10,7 @@ Schema : DES V1.0
 <?path Structure\LeftNephrons\LeftMaculaDensa\ ?>
 
 <?include LeftMaculaDensa_Na.DES ?>
-<?include TGF-Vascular.DES ?>
-<?include TGF-Renin.DES ?>
+<?include LeftTGF-Vascular.DES ?>
+<?include LeftTGF-Renin.DES ?>
 
 End

@@ -23,7 +23,7 @@ By : University Of Mississippi Medical Center
   <name> [AGT[fmol/ml]] </name>
   <integralname> [AGT[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 5.0 </errorlim>
+  <errorlim> 50.0 </errorlim>
 </diffeq>
 
 </equations>

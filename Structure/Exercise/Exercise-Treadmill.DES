@@ -122,7 +122,7 @@ By : University of Mississippi Medical Center
 
 </block>
 
-<block><name> ResetTime&Distance </name>
+<block><name> ResetTime_Distance </name>
 
 <timer><name> ElapsedTime </name><val> 0.0 </val></timer>
 <def><name> DistanceTraveled(Feet) </name><val> 0.0 </val></def>

@@ -19,7 +19,7 @@ By : University Of Mississippi Medical Center
 <constant><name> A </name><val> 0.925 </val></constant>
 <constant><name> B </name><val> 0.05 </val></constant>
 <constant><name> C </name><val> 0.17 </val></constant>
-<constant><name> AT2R_eq </name><val> 0 </val></constant>
+<constant><name> AT2R_eq </name><val> 6.7 </val></constant>
 <var><name> psi_AT1R </name></var>
 <var><name> psi_AT2R </name></var>
 
@@ -79,34 +79,25 @@ By : University Of Mississippi Medical Center
 </def>
 
 
-
-
-
+<!--
 <def><name> A2Effect </name><val> ( LeftKidney-EfferentArtery.A2_A * ( A2Pool.Log10Conc ^ LeftKidney-EfferentArtery.A2_m ) / ( ( A2Pool.Log10Conc ^ LeftKidney-EfferentArtery.A2_m ) + ( LeftKidney-EfferentArtery.A2_S ^ LeftKidney-EfferentArtery.A2_m ) ) ) + LeftKidney-EfferentArtery.A2_B  </val></def>
+-->
 
 <def><name> SympEffect </name><val> ( LeftKidney-EfferentArtery.Symp_A * ( RightKidney-AlphaReceptors.Activity ^ LeftKidney-EfferentArtery.Symp_m ) / ( ( RightKidney-AlphaReceptors.Activity ^ LeftKidney-EfferentArtery.Symp_m ) + ( LeftKidney-EfferentArtery.Symp_S ^ LeftKidney-EfferentArtery.Symp_m ) ) ) + LeftKidney-EfferentArtery.Symp_B  </val></def>
 
 
-
+<!--
 <def><name> A2Effect </name><val> A2Effect [ A2Pool.Log10Conc ] </val></def>
+-->
 
 <def><name> SympEffect </name><val> SympEffect [ RightKidney-AlphaReceptors.Activity ] </val></def>
 
-<def><name> psi_AT1R </name><val> A + B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] </val></def>
+<def><name> psi_AT1R </name><val> 1 / ( A + B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] ) </val></def>
 
 <conditional>
   <name> psi_AT2R </name>
   <test> Gender.IsFemale </test>
-  <true> 0.021 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 </true>
-  <false> 1 </false>
-</conditional>
-
-<!-- First Run  -->
-
-<conditional>
-  <name> psi_AT2R </name>
-  <test> Gender.IsFemale </test>
-  <true> 1 </true>
+  <true> 1 / ( 0.021 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 ) </true>
   <false> 1 </false>
 </conditional>
 

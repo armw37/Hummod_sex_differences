@@ -6,7 +6,7 @@ Author : Tom Coleman
 Copyright : 2011-2011
 By : University of Mississippi Medical Center
 
-<?path Display\Hormones\ ?> -->
+<?path Display\Hormones\ ?>
 
 <?include Summary\Summary.DES ?>
 

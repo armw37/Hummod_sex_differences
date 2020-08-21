@@ -49,11 +49,20 @@ By : University of Mississippi Medical Center
 
 <functions>
 
+<!--
 <curve>
   <name> A2OnConductance </name>
   <point><x> 0.0 </x><y> 1.05 </y><slope> 0 </slope></point>
   <point><x> 1. </x><y> 1.00 </y><slope> -0.08 </slope></point>
   <point><x> 3.5 </x><y> 0.50 </y><slope> 0 </slope></point>
+</curve>
+-->
+
+<curve>
+<name> A2OnConductance </name>
+<point><x> 0 </x><y> 1.05 </y><slope> 0 </slope></point>
+<point><x> 0.923001718159923 </x><y> 1.00 </y><slope> -0.08667372814804214 </slope></point>
+<point><x> 3.423001718159923 </x><y> 0.50 </y><slope> 0 </slope></point>
 </curve>
 
 <curve>
@@ -122,7 +131,7 @@ By : University of Mississippi Medical Center
 
 <def>
   <name> A2Effect </name>
-  <val> A2OnConductance [ A2Pool.Log10Conc ] </val>
+  <val> A2OnConductance [ AT1R-ANG2.Log10Conc ] </val>
 </def>
 
 <def>

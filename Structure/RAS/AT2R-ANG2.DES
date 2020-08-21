@@ -23,7 +23,7 @@ By : University Of Mississippi Medical Center
   <name> [AT2R-ANG2[fmol/ml]] </name>
   <integralname> [AT2R-ANG2[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 500.0 </errorlim>
+  <errorlim> 0.1 </errorlim>
 </diffeq>
 
 </equations>

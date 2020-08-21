@@ -11,6 +11,6 @@ By : University of Mississippi Medical Center
 <?include ArcuateArtery\ArcuateArtery.DES ?>
 <?include AfferentArtery\AfferentArtery.DES ?>
 <?include MyogenicResponse\MyogenicResponse.DES ?>
-<?include EfferentArtery\EfferentArtery.DES ?>
+<!-- <?include EfferentArtery\EfferentArtery.DES ?> -->
 
 End

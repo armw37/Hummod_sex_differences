@@ -13,7 +13,7 @@ By : University Of Mississippi Medical Center
 <var><name> Log10Conc </name></var>
 <var><name> c_IIIV </name></var>
 <var><name> HalfLife </name><val> 30 </val></var>
-<var><name> InitialConc </name><val> 100.0 </val></var>
+<var><name> InitialConc </name><val> 40.0 </val></var>
 
 </variables>
 
@@ -23,7 +23,7 @@ By : University Of Mississippi Medical Center
   <name> [ANGIV[fmol/ml]] </name>
   <integralname> [ANGIV[fmol/ml]] </integralname>
   <dervname> Change </dervname>
-  <errorlim> 500.0 </errorlim>
+  <errorlim> 0.1 </errorlim>
 </diffeq>
 
 </equations>

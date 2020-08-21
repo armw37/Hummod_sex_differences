@@ -19,7 +19,7 @@ By : University Of Mississippi Medical Center
 <constant><name> A </name><val> 0.925 </val></constant>
 <constant><name> B </name><val> 0.05 </val></constant>
 <constant><name> C </name><val> 0.17 </val></constant>
-<constant><name> AT2R_eq </name><val> 0 </val></constant>
+<constant><name> AT2R_eq </name><val> 6.7 </val></constant>
 <var><name> psi_AT1R </name></var>
 <var><name> psi_AT2R </name></var>
 
@@ -169,31 +169,24 @@ By : University Of Mississippi Medical Center
 <def><name> dSympS </name><val> 0.05 * ( Symp_STarget - Symp_S ) </val></def>
 <def><name> dSympB </name><val> 0.05 * ( Symp_BTarget - Symp_B ) </val></def>
 
-
+<!--
 <def><name> A2Effect </name><val> ( A2_A * ( A2Pool.Log10Conc ^ A2_m ) / ( ( A2Pool.Log10Conc ^ A2_m ) + ( A2_S ^ A2_m ) ) ) + A2_B  </val></def>
+-->
 
 <def><name> SympEffect </name><val> ( Symp_A * ( LeftKidney-AlphaReceptors.Activity ^ Symp_m ) / ( ( LeftKidney-AlphaReceptors.Activity ^ Symp_m ) + ( Symp_S ^ Symp_m ) ) ) + Symp_B  </val></def>
 
-
+<!--
 <def><name> A2Effect </name><val> A2Effect [ A2Pool.Log10Conc ] </val></def>
+-->
 
 <def><name> SympEffect </name><val> SympEffect [ LeftKidney-AlphaReceptors.Activity ] </val></def>
 
-<def><name> psi_AT1R </name><val> A + B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] </val></def>
+<def><name> psi_AT1R </name><val> 1 / ( A + B * AT1R-ANG2.[AT1R-ANG2[fmol/ml]] - C / AT1R-ANG2.[AT1R-ANG2[fmol/ml]] ) </val></def>
 
 <conditional>
   <name> psi_AT2R </name>
   <test> Gender.IsFemale </test>
-  <true> 0.021 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 </true>
-  <false> 1 </false>
-</conditional>
-
-<!-- First Run  -->
-
-<conditional>
-  <name> psi_AT2R </name>
-  <test> Gender.IsFemale </test>
-  <true> 1 </true>
+  <true> 1 / ( 0.021 * ( AT2R_eq - AT2R-ANG2.[AT2R-ANG2[fmol/ml]] ) + 1 ) </true>
   <false> 1 </false>
 </conditional>
 

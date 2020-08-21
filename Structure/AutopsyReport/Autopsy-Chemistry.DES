@@ -72,7 +72,7 @@ By : University Of Mississippi Medical Center
 <def><name> ColloidPressure </name><val> PlasmaProtein.COP </val></def>
 <def><name> Osmolarity </name><val> OsmBody.CellWall(mOsm/L) </val></def>
 <def><name> Hematocrit(%) </name><val> BloodVol.Hct(%) </val></def>
-<def><name> [Angiotensin] </name><val> A2Pool.[A2(pG/mL)] </val></def>
+<def><name> [Angiotensin] </name><val> ANG2Plasma.[ANG2[fmol/ml]] </val></def>
 <def><name> PlasmaReninActiviy </name><val> ReninPool.[PRA] </val></def>
 <def><name> [Aldosterone] </name><val> AldoPool.[Aldo(pMol/L)] </val></def>
 <def><name> [AntidiureticHormone] </name><val> ADHPool.[ADH] </val></def>

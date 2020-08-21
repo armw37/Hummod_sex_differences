@@ -33,11 +33,20 @@ By : University Of Mississippi Medical Center
 
 <functions>
 
+<!--
 <curve>
   <name> A2OnFract </name>
   <point><x> 0.5 </x><y> 0.6 </y><slope> 0 </slope></point>0.7 0.8
   <point><x> 1. </x><y> 1.0 </y><slope> 1.5 </slope></point>0.8
   <point><x> 1.6 </x><y> 1.2 </y><slope> 0 </slope></point>1.2
+</curve>
+-->
+
+<curve>
+<name> A2OnFract </name>
+<point><x> 0.42300171815992305 </x><y> 0.6 </y><slope> 0 </slope></point>
+<point><x> 0.923001718159923 </x><y> 1.0 </y><slope> 1.625132402776482 </slope></point>
+<point><x> 1.5230017181599231 </x><y> 1.2 </y><slope> 0 </slope></point>
 </curve>
 
 <curve>
@@ -110,17 +119,16 @@ By : University Of Mississippi Medical Center
   <val> RightProximalTubule_Na.IFP_A * ( LeftNephronIFP.Pressure ^ RightProximalTubule_Na.IFP_m ) / ( ( RightProximalTubule_Na.IFP_S ^ RightProximalTubule_Na.IFP_m ) + ( LeftNephronIFP.Pressure ^ RightProximalTubule_Na.IFP_m ) ) + RightProximalTubule_Na.IFP_B </val>
 </def>
 
+<!--
 <def>
   <name> A2Effect </name>
   <val> RightProximalTubule_Na.A2_A * ( A2Pool.Log10Conc  ^ RightProximalTubule_Na.A2_m ) / ( ( RightProximalTubule_Na.A2_S ^ RightProximalTubule_Na.A2_m ) + ( A2Pool.Log10Conc  ^ RightProximalTubule_Na.A2_m ) ) + RightProximalTubule_Na.A2_B </val>
 </def>
+-->
 
 <def>
-  <name> A2Effect </name><val> A2OnFract [ A2Pool.Log10Conc ] </val>
+  <name> A2Effect </name><val> A2OnFract [ AT1R-ANG2.Log10Conc ] </val>
 </def>
-
-
-<def><name> test </name><val> A2OnFract [ A2Pool.Log10Conc ] </val></def>
 
 <def>
   <name> TotalEffect </name>
